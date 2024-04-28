@@ -1,0 +1,117 @@
+.MainPage {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.left-h {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+}
+
+.right-h {
+    flex: 1;
+    position: relative;
+    background-color: #35ae2a;
+}
+
+.the-best-ad{
+    margin-top: 4rem;
+    background-color: #363d42;
+    border-radius: 4rem;
+    width: fit-content;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.the-best-ad>span{
+    z-index: 2;
+    font-weight: bold;
+    color: white;
+}
+
+.the-best-ad>div{
+    position: absolute;
+    background-color: #35ae2a;
+    width: 5.4rem;
+    height: 80%;
+    left: 8px;
+    border-radius: 3rem;
+    z-index: 1;
+}
+
+.Title-Text {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 1.2rem;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-overflow: inherit;
+    text-align: left;
+}
+
+.Title-Text>div:nth-of-type(3) {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 1px;
+    width: 80%;
+}
+
+.Title-Text>div:nth-of-type(2) {
+    /* font-size: 1rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 1px;
+    width: 80%; */
+    text-shadow: 1px 0.5px black;
+}
+
+.stroke-text{
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white
+}
+
+.figures {
+    gap: 2rem;
+    display: flex;
+}
+
+.figures>div{
+    display: flex;
+    flex-direction: column;
+}
+
+.figures>div>span:nth-of-type(1){
+    color: white;
+    font-size: 2rem;
+}
+
+.figures>div>span:nth-of-type(2){
+    color: grey;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.right-h>.view-cart{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    color: black;
+}

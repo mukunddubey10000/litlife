@@ -1,0 +1,28 @@
+.HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+   height: 4.5rem;
+   width: 4.5rem;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: translate3D(0,0,0)scale(1.09);
+    transition: transform 0.15s ease-in-out;
+}
+
+.header-menu{
+    list-style: none;
+    gap: 2rem;
+    display: flex;
+    font-weight: 500;
+    color: white
+}
+
+.header-menu>li:hover{
+    cursor: pointer;
+    color: #35ae2a;
+}
