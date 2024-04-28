@@ -8,13 +8,15 @@ const Header = () => {
 
   return (
     <div className='HeaderContainer'>
-      <motion.div
-        initial={{ scale: 0.1 }}
-        whileInView={{ scale: 1 }}
-        transition={{ ...transition, duration: 1.3 }}
-        className="logo">
-        <SvgLogo />
-      </motion.div>
+      <div className='logoHover'>
+        <motion.div
+          initial={{ scale: 0.1 }}
+          whileInView={{ scale: 1 }}
+          transition={{ ...transition, duration: 1.3 }}
+          className="logo">
+          <SvgLogo />
+        </motion.div>
+      </div>
       <ul className='header-menu'>
         <li>Services</li>
         <li>Happy Customers</li>

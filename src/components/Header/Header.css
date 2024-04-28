@@ -8,10 +8,13 @@
    width: 4.5rem;
 }
 
-.logo:hover {
+.logoHover:hover {
+    border-radius: 6rem;
     cursor: pointer;
     transform: translate3D(0,0,0)scale(1.09);
     transition: transform 0.15s ease-in-out;
+    box-shadow: 2px 1px 20px greenyellow;
+    filter: dropshadow(color=greenyellow, offx=40, offy=40);
 }
 
 .header-menu{
