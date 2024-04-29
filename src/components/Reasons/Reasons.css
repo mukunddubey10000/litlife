@@ -60,3 +60,23 @@
     transform: translate3D(0,-1px,0)scale(2);
     transition: transform 0.15s ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+    .Reasons{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .left-r{
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left-r>img{
+        height: 10rem;
+        width: 10rem;
+        padding: 2rem;
+    }
+}

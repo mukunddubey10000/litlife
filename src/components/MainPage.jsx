@@ -2,6 +2,7 @@ import React from "react";
 import "./MainPage.css";
 import Header from "./Header/Header";
 import { motion } from 'framer-motion';
+import NumberCounter from 'number-counter'
 
 const MainPage = () => {
 	const transition = { type: 'spring', duration: 1.5 }
@@ -40,15 +41,15 @@ const MainPage = () => {
 
 				<div className="figures">
 					<div>
-						<span>+ 54</span>
+						<span><NumberCounter start={30} end={54} delay='3' preFix="+" /></span>
 						<span>Months Warranty</span>
 					</div>
 					<div>
-						<span>+ 8</span>
+						<span><NumberCounter start={2} end={8} delay='2' preFix="+" /></span>
 						<span>Products</span>
 					</div>
 					<div>
-						<span>+ 1</span>
+						<span><NumberCounter start={0} end={1} delay='1' preFix="+" /></span>
 						<span>Retailers</span>
 					</div>
 				</div>

@@ -5,6 +5,7 @@ import MainPage from './components/MainPage.jsx';
 import Reasons from './components/Reasons/Reasons';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Testimonials from './components/Testimonials/Testimonials';
 
 function App() {
 
@@ -22,9 +23,9 @@ function App() {
     return (
       <div className="AppLoading">
         <motion.div
-          initial={{ rotate: 0 }}
-          whileInView={{ rotate: 360 }}
-          transition={{ ...transition, duration: 1 }}
+          initial={{ scale: 0, rotate: 0 }}
+          whileInView={{ scale: 1, rotate: 360 }}
+          transition={{ ...transition, duration: 1.5 }}
           className="AppLoadingContainer">
           <SvgLogo />
         </motion.div>
@@ -36,6 +37,7 @@ function App() {
       <MainPage />
       <Explore />
       <Reasons />
+      <Testimonials />
     </div>
   );
 }
