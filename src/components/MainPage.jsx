@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MainPage.css";
 import Header from "./Header/Header";
 import { motion } from 'framer-motion';
 import NumberCounter from 'number-counter'
+import all from './../Assets/all.png'
+import leftArrow from './../Assets/leftArrow.png'
+import rightArrow from './../Assets/rightArrow.png'
+import erickshaw140AH from './../Assets/erickshaw140AH.png';
+import inverterBatteryJumbo180AH from './../Assets/inverterBatteryJumbo180AH.png';
+import solar25AH from './../Assets/solar25AH.png';
+import solar45AH from './../Assets/solar45AH.png';
+import tallTubular200AH from './../Assets/tallTubular200AH.png';
 
 const MainPage = () => {
+	const galleryImageList = [erickshaw140AH, inverterBatteryJumbo180AH, solar25AH, solar45AH, tallTubular200AH];
+	const [galleryIndex, setGalleryIndex] = useState(0);
+
 	const transition = { type: 'spring', duration: 1.5 }
+
 	return (
 		<div className="MainPage">
 			<div className="left-h">
@@ -56,6 +68,14 @@ const MainPage = () => {
 			</div>
 			<div className="right-h">
 				<button className="view-cart">View Cart</button>
+				<img src={all} alt="all-products" className="all-product-img" />
+				<div className="gallery">
+					{<img src={galleryImageList[galleryIndex]} alt="" />}
+				</div>
+				<div className="arrows">
+					<img src={leftArrow} alt="rightArrow" className="leftArrow" onClick={() => galleryIndex == galleryImageList?.length - 1 ? setGalleryIndex(0) : setGalleryIndex((index) => index + 1)} />
+					<img src={rightArrow} alt="rightArrow" className="rightArrow" onClick={() => galleryIndex == 0 ? setGalleryIndex(galleryImageList?.length - 1) : setGalleryIndex((index) => index - 1)} />
+				</div>
 			</div>
 		</div >
 	);

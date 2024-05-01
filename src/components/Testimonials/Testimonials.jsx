@@ -7,9 +7,9 @@ import leftArrow from '../../Assets/leftArrow.png';
 
 const Testimonials = () => {
     const [isSelected, setIsSelected] = useState(0);
-    useState(() => {
-        console.log('Mukund index = ', isSelected);
-    }, [isSelected])
+    // useState(() => {
+    //     console.log('Mukund index = ', isSelected);
+    // }, [isSelected])
 
     return (
         <div className='Testimonials'>

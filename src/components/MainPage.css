@@ -16,12 +16,6 @@
     color: white;
 }
 
-.right-h {
-    flex: 1;
-    position: relative;
-    background-color: #35ae2a;
-}
-
 .the-best-ad{
     margin-top: 4rem;
     background-color: #363d42;
@@ -114,6 +108,49 @@
     right: 2rem;
     top: 2rem;
     color: black;
+}
+
+.all-product-img{
+    position: relative;
+    height: 20rem;
+    width: 35rem;
+    right: 17rem;
+    top: 20rem;
+}
+
+.right-h {
+    flex: 1;
+    position: relative;
+    background-color: #35ae2a;
+}
+
+.arrows{
+    margin-left: 11rem;
+    margin-bottom: 2rem;
+}
+
+.gallery{
+    display: flex;
+    flex: 1 1;
+    background-color: rgb(61, 61, 61);
+    height: 30rem;
+    width: 30rem;
+    /* border-radius: 50%; */
+    margin-top: -15rem;
+    margin-left: 1rem;
+}
+
+.gallery>img{
+    height: 25rem;
+    width: 40rem;
+    position: relative;
+    top: 2rem;
+    right: 3rem;
+    z-index: 1;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 @media screen and (max-width:  768px) {
