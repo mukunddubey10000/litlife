@@ -6,7 +6,8 @@ import Reasons from './components/Reasons/Reasons';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Testimonials from './components/Testimonials/Testimonials';
-
+import Header from './components/Header/Header';
+import ContactUs from './components/ContactUs/ContactUs';
 function App() {
 
   const [isLoading, setIsLoading] = useState(1);
@@ -35,9 +36,11 @@ function App() {
   return (
     <div className="App">
       <MainPage />
+      <Header />
       <Explore />
       <Reasons />
       <Testimonials />
+      <ContactUs />
     </div>
   );
 }

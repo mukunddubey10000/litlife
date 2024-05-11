@@ -1,0 +1,85 @@
+.slideshow-container {
+    border-style: solid;
+    height: 30rem;
+    width: 100%;
+    align-self: center;
+    border-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image {
+    height: 30rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border-radius: 1rem;
+}
+
+.image2 {
+    height: 30rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border-radius: 1rem;
+    animation: slideImage 8s linear infinite
+}
+
+@keyframes slideImage {
+    from { scale: 0.8}
+    to { scale: 1}
+}
+
+@media screen and (max-width: 768px) {
+    .slideshow-container{
+        bottom: 2rem;
+        width: 90%;
+        position: relative;
+        right: 2rem
+    }
+
+    .image{
+        height: 13rem;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        border-radius: 1rem;
+    }
+
+    .image2 {
+        height: 13rem;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        border-radius: 1rem;
+        animation: slideImage 8s linear infinite
+    }
+    @keyframes slideImage {
+        from { scale: 0.8}
+        to { scale: 1}
+    }
+}

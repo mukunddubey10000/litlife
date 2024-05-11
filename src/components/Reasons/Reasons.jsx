@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Reasons.css'
 import './../MainPage.css'
-import { motion, inView } from 'framer-motion';
+import { motion } from 'framer-motion';
+import SlideShow from '../SlideShow/SlideShow';
 
 const Reasons = () => {
     const tick = "https://cdn-icons-png.flaticon.com/512/1008/1008917.png";
     const transition = { type: 'spring', duration: 0.5 }
 
+
     return (
         <div className='Reasons' id="reasons">
             <div className='left-r'>
-                <img src="https://5.imimg.com/data5/CY/HS/VU/SELLER-743647/exide-inverter-battery.jpeg" alt="" />
-                <img src="https://5.imimg.com/data5/CY/HS/VU/SELLER-743647/exide-inverter-battery.jpeg" alt="" />
+                {
+                    <SlideShow />
+                }
             </div>
             <div className='right-r'>
                 <span className=''>Some reasons</span>

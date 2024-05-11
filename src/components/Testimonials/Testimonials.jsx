@@ -7,9 +7,9 @@ import leftArrow from '../../Assets/leftArrow.png';
 
 const Testimonials = () => {
     const [isSelected, setIsSelected] = useState(0);
-    useState(() => {
-        console.log('Mukund index = ', isSelected);
-    }, [isSelected])
+    // useState(() => {
+    //     console.log('Mukund index = ', isSelected);
+    // }, [isSelected])
 
     return (
         <div className='Testimonials'>
@@ -17,10 +17,10 @@ const Testimonials = () => {
                 <span>Testimonials</span>
                 <span className="stroke-text">What they say </span>
                 <span>about us?</span>
-                <span>
+                <span className='user-review1'>
                     {testimonialsData?.[isSelected]?.review}
                 </span>
-                <span>
+                <span className='user-review2'>
                     <span style={{ color: "#35ae2a" }}>{testimonialsData[isSelected]?.name}</span>
                     <span className='designation'>{' - ' + testimonialsData[isSelected]?.designation}</span>
                 </span>

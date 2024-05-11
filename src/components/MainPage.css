@@ -1,6 +1,8 @@
 .MainPage {
     display: flex;
     height: 100vh;
+    position: relative;
+    top: 2rem;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -14,12 +16,6 @@
     flex-direction: column;
     gap: 2rem;
     color: white;
-}
-
-.right-h {
-    flex: 1;
-    position: relative;
-    background-color: #35ae2a;
 }
 
 .the-best-ad{
@@ -116,12 +112,79 @@
     color: black;
 }
 
+.all-product-img{
+    position: absolute;
+    height: 30rem;
+    width: 45rem;
+    right: 0rem;
+    top: 8rem;
+    filter: drop-shadow(10px 10px 20px orange)
+}
+
+.right-h {
+    flex: 1;
+    position: relative;
+    background-color: #35ae2a;
+}
+
+.arrows{
+    margin-left: 11rem;
+    margin-bottom: 2rem;
+}
+
+.gallery{
+    display: flex;
+    flex: 1 1;
+    background-color: rgb(61, 61, 61);
+    height: 30rem;
+    width: 30rem;
+    /* border-radius: 50%; */
+    margin-top: -15rem;
+    margin-left: 1rem;
+}
+
+.gallery>img{
+    height: 25rem;
+    width: 40rem;
+    position: relative;
+    top: 2rem;
+    right: 3rem;
+    z-index: 1;
+}
+
+.Best-Innovation-Typrewriter{
+    /* width: 45rem; */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 0; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0em; /* Adjust as needed */
+    animation: 
+        typing 2.4s steps(40, end),
+        blink-caret .2s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 70% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: greenyellow; }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 @media screen and (max-width:  768px) {
     .MainPage{
         flex-direction: column;
     }
 
     .the-best-ad{
+        top: 2rem;
         margin-top: 0;
         font-size: small;
         align-self: center;
@@ -153,5 +216,27 @@
     .right-h{
         position: relative;
         background: none
+    }
+
+    .all-product-img {
+        position: relative;
+        top: 3rem;
+        right: 2.9rem;
+        width: 25rem;
+        height: 15rem;
+    }
+
+    .Best-Innovation-Typrewriter{
+        width: 100rem;
+        font-size: x-large;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 0; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0em; /* Adjust as needed */
+        padding: 0 0.2em 0 0.2em;
+        animation: 
+            typing 2.4s steps(40, end),
+            blink-caret .2s step-end infinite;
     }
 }
