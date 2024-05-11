@@ -21,8 +21,6 @@ const MainPage = () => {
 	return (
 		<div className="MainPage">
 			<div className="left-h">
-				<Header />
-
 
 				<div className="the-best-ad">
 					<motion.div
@@ -37,10 +35,14 @@ const MainPage = () => {
 
 
 				<div className="Title-Text">
-					<div>
+					<motion.div
+						initial={{ scale: 2 }}
+						whileInView={{ scale: 1 }}
+						transition={{ ...transition, duration: 1 }}
+					>
 						<span className="stroke-text">Experience </span>
-					</div>
-					<div>
+					</motion.div>
+					<div className="Best-Innovation-Typrewriter">
 						<span>Best Innovations</span>
 					</div>
 					<div className="insert-line-break">
@@ -53,11 +55,11 @@ const MainPage = () => {
 
 				<div className="figures">
 					<div>
-						<span><NumberCounter start={30} end={54} delay='3' preFix="+" /></span>
+						<span><NumberCounter start={20} end={54} delay='3' preFix="+" /></span>
 						<span>Months Warranty</span>
 					</div>
 					<div>
-						<span><NumberCounter start={2} end={8} delay='2' preFix="+" /></span>
+						<span><NumberCounter start={1} end={8} delay='2' preFix="+" /></span>
 						<span>Products</span>
 					</div>
 					<div>
@@ -67,15 +69,15 @@ const MainPage = () => {
 				</div>
 			</div>
 			<div className="right-h">
-				<button className="view-cart">View Cart</button>
+				{/* <button className="view-cart">View Cart</button> */}
 				<img src={all} alt="all-products" className="all-product-img" />
-				<div className="gallery">
+				{/* <div className="gallery">
 					{<img src={galleryImageList[galleryIndex]} alt="" />}
-				</div>
-				<div className="arrows">
+				</div> */}
+				{/* <div className="arrows">
 					<img src={leftArrow} alt="rightArrow" className="leftArrow" onClick={() => galleryIndex == galleryImageList?.length - 1 ? setGalleryIndex(0) : setGalleryIndex((index) => index + 1)} />
 					<img src={rightArrow} alt="rightArrow" className="rightArrow" onClick={() => galleryIndex == 0 ? setGalleryIndex(galleryImageList?.length - 1) : setGalleryIndex((index) => index - 1)} />
-				</div>
+				</div> */}
 			</div>
 		</div >
 	);

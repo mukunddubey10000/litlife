@@ -1,7 +1,10 @@
 .Testimonials{
     display: flex;
+    position: relative;
+    left: 0;
+    top: 0rem;
     gap: 1rem;
-    padding: 0 2rem;
+    padding: 0 2rem 10rem;
 }
 
 .left-t{
@@ -50,7 +53,7 @@
     position: absolute;
     width: 17rem;
     height: 20rem;
-    border: 2px solid orange;
+    border: 2px solid #35ae2a;
     background-color: transparent;
     right: 9rem;
     top: 0.9rem;
@@ -62,18 +65,89 @@
     height: 19rem;
     top: 4rem;
     right: 7rem;
-    background: orange;
+    background: #35ae2a;
 }
 
 .arrows {
     display: flex;
     gap: 1rem;
-    position: absolute;
-    bottom: 1rem;
-    left: 3rem;
+    position: relative;
+    top: 10rem;
+    /* bottom: 1rem; */
+    right: 10rem;
 }
 
 .arrows>img{
     width: 1.5rem;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .Testimonials{
+        display: flex;
+        position: relative;
+        left: 0;
+        top: -5rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .left-t{
+        position: relative;
+        display: flex;
+        flex: 1 1;
+        gap: 2rem;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .right-t{
+        display: flex;
+    }
+
+    .right-t>img{
+        top: 2rem;
+        left: 0rem;
+        right: 12rem;
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .arrows>img{
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        top: 12rem;
+        left: 80%
+    }
+
+    .right-t>:nth-child(1){
+        position: absolute;
+        width: 16rem;
+        height: 16rem;
+        border: 2px solid #35ae2a;
+        background-color: transparent;
+        right: 13rem;
+        top: 0.9rem;
+        left: -1rem;
+    }
+
+    .right-t>:nth-child(2){
+        position: absolute;
+        width: 16rem;
+        height: 16rem;
+        top: 3rem;
+        right: 11rem;
+        background: #35ae2a;
+        left: 1rem;
+    }
+
+    .user-review1{
+        font-size: small;
+    }
+
+    .user-review2{
+        font-size: medium;
+    }
 }

@@ -11,12 +11,6 @@
     padding: 2rem;
 }
 
-.left-r>img{
-    object-fit: cover;
-    padding: 1rem;
-    flex: 1 1;
-}
-
 .right-r{
     display: flex;
     flex: 1 1;
@@ -29,12 +23,14 @@
     font-weight: bold;
     color: #35ae2a;
     font-size: 1.5rem;
+    padding-left: 1rem;
 }
 
 .right-r>div{
     color: white;
     font-size: 3rem;
     font-weight: bold;
+    padding-left: 1rem;
 }
 
 .details-r{
@@ -69,14 +65,30 @@
     
     .left-r{
         display: flex;
-        overflow: hidden;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        flex: 1 1;
+        width: 100%;
+        height: 20rem;
+        padding: 2rem;
     }
 
     .left-r>img{
         height: 10rem;
         width: 10rem;
         padding: 2rem;
+    }
+
+    .gallery-section{
+        height: 300px;
+        width: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        flex-shrink: 0;
+        border-style: solid;
+        border-color: white;
+        border-radius: 1rem;
     }
 }

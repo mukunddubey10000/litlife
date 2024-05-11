@@ -1,31 +1,58 @@
 .HeaderContainer {
     display: flex;
+    position: fixed;
+    z-index: 100;
+    top: 0rem;
     justify-content: space-between;
+    background-color: rgb(255, 166, 0);
+    filter: drop-shadow(1px 1px 16px rgb(255, 166, 0));
+    width: 100%;
+    height: 5rem;
+    border-radius: 0 0 1.2rem 1.2rem;
 }
 
 .logo {
    height: 4.5rem;
    width: 4.5rem;
+   background-color: white;
+   border-radius: 3rem;
+   position: relative;
+   top: 5px;
+   left: 1rem
 }
 
 .logoHover:hover {
-    border-radius: 6rem;
+    border-radius: 4.5rem;
     cursor: pointer;
     transform: translate3D(0,0,0)scale(1.09);
     transition: transform 0.15s ease-in-out;
-    box-shadow: 2px 1px 20px greenyellow;
-    filter: dropshadow(color=greenyellow, offx=40, offy=40);
 }
 
 .header-menu{
+    position: relative;
+    top: 1rem;
     list-style: none;
     gap: 2rem;
     display: flex;
     font-weight: 500;
-    color: white
+    color: white,;
+    width: 100%;
+    font-size: medium;
+    font-weight: 600;
 }
 
 .header-menu>li:hover{
     cursor: pointer;
-    color: #35ae2a;
+    color: white;
+}
+
+@media screen and ( max-width: 768px) {
+    .logo{
+        height: 3rem;
+        width: 3rem;
+    }
+    .HeaderContainer{
+        width: 100%;
+        height: fit-content
+    }
 }
