@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './ContactUs.css'
 import './../MainPage.css'
+import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
 
-    const emailMe = () => {
-        return window.location = 'mailto:trsinnovation2022@gmail.com'
-    }
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_dgjhmls', 'template_5izi7vu', form.current, {
+                publicKey: 'EXTj4QaI6IM-0Y37d',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
 
     return (
         <>
@@ -17,17 +33,19 @@ const ContactUs = () => {
             <div className='contact-us-container'>
 
                 <div className='grid-container'>
-                    <div className='left-container grid-item'>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <div className='left-container grid-item'>
 
-                        <div className='form'>
-                            <textarea className='input1' placeholder='Name' itemType='name' />
-                            <textarea className='input2' placeholder='Email' />
-                            <textarea className='input3' placeholder='Phone Number' />
-                            <textarea className='input4' placeholder='Enter Message Here' />
+                            <div className='form'>
+                                <textarea className='input1' placeholder='Name' name='from_name' />
+                                <textarea className='input2' placeholder='Email' name="from_email" />
+                                <textarea className='input3' placeholder='Phone Number' name="from_phone_number" />
+                                <textarea className='input4' placeholder='Enter Message Here' name="from_message" />
+                            </div>
+
+                            <div className='submit-form' onClick={sendEmail}>Submit</div>
                         </div>
-
-                        <div className='submit-form'>Submit</div>
-                    </div>
+                    </form>
 
                     {/* Here goes contact details */}
                     <div className='right-container grid-item'>
