@@ -53,6 +53,28 @@
     }
     .HeaderContainer{
         width: 100%;
-        height: fit-content
+        height: 4rem
+    }
+    .HeaderContainer>:nth-child(2){
+        position: fixed;
+        z-index: 100;
+    }
+    .header-menu{
+        display: flex;
+        flex-direction: column;
+        z-index: 99;
+        background-color: rgb(85, 85, 85);
+        width: fit-content;
+        position: relative;
+        right: 1rem;
+        padding: 1rem;
+        color: white;
+        border-radius: 1rem;
+    }
+    .header-menu>li{
+        align-self: center;
+    }
+    .header-menu>li:hover{
+        color: greenyellow
     }
 }
