@@ -89,6 +89,7 @@
         left: 0;
         top: -5rem;
         gap: 1rem;
+        padding: 0 2rem 10rem;
         flex-direction: column;
     }
 

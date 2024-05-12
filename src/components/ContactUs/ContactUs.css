@@ -154,6 +154,8 @@
 @media screen and (max-width: 768px) {
     .contact-us-title{
         font-size: 3.5rem;
+        top: 1rem;
+        position: relative;
         display: flex;
     }
 
@@ -198,5 +200,20 @@
     .right-container{
         align-items: center;
         justify-content: center;
+    }
+
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .phone{
+        position: relative;
+        bottom: 4rem;
+    }
+
+    .email{
+        position: relative;
+        bottom: 5rem;
     }
 }
