@@ -3,6 +3,8 @@ import './ContactUs.css'
 import './../MainPage.css'
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactUs = () => {
 
@@ -13,7 +15,12 @@ const ContactUs = () => {
 
     const sendEmail = (e) => {
         if (emailID == null || message == null || phone == null) {
-            console.log("Mandatory fields");
+            const showToastMessage = () => {
+                toast.error("Please fill all details !", {
+                    position: toast.POSITION?.TOP_RIGHT,
+                });
+            };
+            showToastMessage();
             return;
         }
         e.preventDefault();
@@ -23,6 +30,12 @@ const ContactUs = () => {
             })
             .then(
                 () => {
+                    const showToastMessage = () => {
+                        toast.success("Successfully sent!", {
+                            position: toast.POSITION?.TOP_RIGHT,
+                        });
+                    };
+                    showToastMessage();
                     console.log('SUCCESS!');
                 },
                 (error) => {
@@ -72,6 +85,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer className='toastContainer' />
         </>
     )
 }
