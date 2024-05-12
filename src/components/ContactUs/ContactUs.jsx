@@ -1,15 +1,22 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import './ContactUs.css'
 import './../MainPage.css'
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const ContactUs = () => {
 
+    const [emailID, setEmailID] = useState(null);
+    const [message, setMessage] = useState(null);
+    const [phone, setPhone] = useState(null);
     const form = useRef();
 
     const sendEmail = (e) => {
+        if (emailID == null || message == null || phone == null) {
+            console.log("Mandatory fields");
+            return;
+        }
         e.preventDefault();
-
         emailjs
             .sendForm('service_dgjhmls', 'template_5izi7vu', form.current, {
                 publicKey: 'EXTj4QaI6IM-0Y37d',
@@ -38,9 +45,9 @@ const ContactUs = () => {
 
                             <div className='form'>
                                 <textarea className='input1' placeholder='Name' name='from_name' />
-                                <textarea className='input2' placeholder='Email' name="from_email" />
-                                <textarea className='input3' placeholder='Phone Number' name="from_phone_number" />
-                                <textarea className='input4' placeholder='Enter Message Here' name="from_message" />
+                                <textarea className='input2' placeholder='Email' name="from_email" onChange={(text) => setEmailID(text.target.value)} />
+                                <textarea className='input3' placeholder='Phone Number' name="from_phone_number" onChange={(text) => setPhone(text.target.value)} />
+                                <textarea className='input4' placeholder='Enter Message Here' name="from_message" onChange={(text) => setMessage(text.target.value)} />
                             </div>
 
                             <div className='submit-form' onClick={sendEmail}>Submit</div>
