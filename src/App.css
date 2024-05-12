@@ -34,6 +34,7 @@
     gap: 10rem;
     animation: moveBackground 20s linear infinite;
     mix-blend-mode: overlay;
+    scroll-behavior: smooth;
   }
   @keyframes moveBackground {
     from { background-position: 0px 0px } /* Start position (top-left) */

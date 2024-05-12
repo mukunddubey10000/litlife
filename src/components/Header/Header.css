@@ -41,7 +41,7 @@
     font-weight: 600;
 }
 
-.header-menu>li:hover{
+.header-menu>*:hover{
     cursor: pointer;
     color: white;
 }
@@ -74,7 +74,8 @@
     .header-menu>li{
         align-self: center;
     }
-    .header-menu>li:hover{
+    .header-menu>*:hover{
+        cursor: pointer;
         color: greenyellow
     }
 }

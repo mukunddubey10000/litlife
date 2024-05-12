@@ -10,7 +10,7 @@ const Reasons = () => {
 
 
     return (
-        <div className='Reasons' id="reasons">
+        <div name="aboutUs" className='Reasons' id="reasons">
             <div className='left-r'>
                 {
                     <SlideShow />

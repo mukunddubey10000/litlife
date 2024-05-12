@@ -26,7 +26,7 @@ const ContactUs = () => {
 
     return (
         <>
-            <div className='contact-us-title'>
+            <div name="contactUs" className='contact-us-title'>
                 <span className='stroke-text'>Contact </span>
                 <span>Us</span>
             </div>

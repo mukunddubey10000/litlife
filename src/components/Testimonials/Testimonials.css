@@ -109,7 +109,7 @@
 
     .right-t>img{
         top: 2rem;
-        left: 0rem;
+        left: -0.5rem;
         right: 12rem;
         width: 16rem;
         height: 16rem;
@@ -131,7 +131,7 @@
         background-color: transparent;
         right: 13rem;
         top: 0.9rem;
-        left: -1rem;
+        left: -1.2rem;
     }
 
     .right-t>:nth-child(2){
@@ -141,7 +141,7 @@
         top: 3rem;
         right: 11rem;
         background: #35ae2a;
-        left: 1rem;
+        left: 0.1rem;
     }
 
     .user-review1{

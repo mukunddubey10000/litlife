@@ -10,7 +10,7 @@ const Explore = () => {
     const transition = { type: 'spring', duration: 0.5 }
 
     return (
-        <div className='Explore' id="explore">
+        <div name="services" className='Explore' id="explore">
             <div className='Explore-Header'>
                 <span className='stroke-text'>Explore our </span>
                 <span>Products </span>

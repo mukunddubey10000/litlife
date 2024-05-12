@@ -3,6 +3,7 @@ import SvgLogo from '../../Assets/HeaderLogo.js'
 import './Header.css'
 import { motion } from 'framer-motion';
 import bars from '../../Assets/bars.png'
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const mobile = window.innerWidth <= 768 ? true : false;
@@ -51,10 +52,14 @@ const Header = () => {
           </div>
         )
         : (<ul className='header-menu'>
-          <li onClick={() => setMenu(false)}>Services</li>
+          <Link activeClass='active' to="services" spy={true} smooth={true} duration={800} onClick={() => setMenu(false)}>Services</Link>
+          <Link activeClass='active' to="aboutUs" spy={true} smooth={true} duration={800} onClick={() => setMenu(false)}>About Us</Link>
+          <Link activeClass='active' to="testimonials" spy={true} smooth={true} duration={800} onClick={() => setMenu(false)}>Happy Customers</Link>
+          <Link activeClass='active' to="contactUs" spy={true} smooth={true} duration={800} onClick={() => setMenu(false)}>Contact Us</Link>
+          {/* <li onClick={() => setMenu(false)}>Services</li>
           <li onClick={() => setMenu(false)}>Happy Customers</li>
           <li onClick={() => setMenu(false)}>About Us</li>
-          <li onClick={() => setMenu(false)}>Contact Us</li>
+          <li onClick={() => setMenu(false)}>Contact Us</li> */}
         </ul>)
       }
     </div>

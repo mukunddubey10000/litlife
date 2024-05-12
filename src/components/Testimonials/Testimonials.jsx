@@ -12,7 +12,7 @@ const Testimonials = () => {
     // }, [isSelected])
 
     return (
-        <div className='Testimonials'>
+        <div name="testimonials" className='Testimonials'>
             <div className='left-t'>
                 <span>Testimonials</span>
                 <span className="stroke-text">What they say </span>
