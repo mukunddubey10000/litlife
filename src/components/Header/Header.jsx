@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import bars from '../../Assets/bars.png'
 import { Link } from 'react-scroll';
 
-const Header = () => {
+const Header = ({ navigate }) => {
   const mobile = window.innerWidth <= 768 ? true : false;
   const transition = { type: 'spring', duration: 0.5 }
   const [menu, setMenu] = useState(false);
@@ -24,7 +24,7 @@ const Header = () => {
   }, [menu]);
 
   return (
-    <div className='HeaderContainer'>
+    <div className='HeaderContainer' onClick={() => navigate('/')}>
       <div className='logoHover'>
         <motion.div
           initial={{ scale: 0.1 }}
@@ -52,10 +52,22 @@ const Header = () => {
           </div>
         )
         : (<ul className='header-menu'>
-          <Link activeClass='active' to="services" spy={true} smooth={true} duration={800} onClick={() => setMenu(false)}>Services</Link>
-          <Link activeClass='active' to="aboutUs" spy={true} smooth={true} duration={800} onClick={() => setMenu(false)}>About Us</Link>
-          <Link activeClass='active' to="testimonials" spy={true} smooth={true} duration={800} onClick={() => setMenu(false)}>Happy Customers</Link>
-          <Link activeClass='active' to="contactUs" spy={true} smooth={true} duration={800} onClick={() => setMenu(false)}>Contact Us</Link>
+          <Link activeClass='active' to="services" spy={true} smooth={true} duration={800} onClick={() => {
+            setMenu(false)
+            navigate('/')
+          }}>Services</Link>
+          <Link activeClass='active' to="aboutUs" spy={true} smooth={true} duration={800} onClick={() => {
+            navigate('/')
+            setMenu(false)
+          }}>About Us</Link>
+          <Link activeClass='active' to="testimonials" spy={true} smooth={true} duration={800} onClick={() => {
+            navigate('/')
+            setMenu(false)
+          }}>Happy Customers</Link>
+          <Link activeClass='active' to="contactUs" spy={true} smooth={true} duration={800} onClick={() => {
+            navigate('/')
+            setMenu(false)
+          }}>Contact Us</Link>
           {/* <li onClick={() => setMenu(false)}>Services</li>
           <li onClick={() => setMenu(false)}>Happy Customers</li>
           <li onClick={() => setMenu(false)}>About Us</li>

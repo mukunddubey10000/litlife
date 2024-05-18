@@ -1,14 +1,14 @@
 export const testimonialsData = [
     {
-        name: "Narendra Modi",
-        designation: "PM of India",
-        review: "Very good products & variety is superb.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0laVIc9IBDdvK-b0YsbsaJReUImtXlbbmVch2Jl0jug&s"
+        name: "Mukund",
+        designation: "Engineer",
+        review: "Very good products. Whole process of buying was much easier than expected.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLNZRB00ukJxLkVaVm-XfnXP8ygc7qRyaR-eOlWqPnA&s"
     },
     {
-        name: "Barack Obama",
-        designation: "Ex-PM of USA",
-        review: "Thank you. Now my children can study during power cut too.",
-        image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRlJ4ZwNR5h_VyPNDygNN7JhWkqdoiL3I-QJ6c6k-xo7PiAKo5u"
+        name: "Ram Babu",
+        designation: "NA",
+        review: "Thank you. Due to multiple power cuts it was very difficult to run fans and lights. With large battery I can now have peaceful evenings.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLNZRB00ukJxLkVaVm-XfnXP8ygc7qRyaR-eOlWqPnA&s"
     },
 ];

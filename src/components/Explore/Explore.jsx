@@ -5,7 +5,7 @@ import { exploreData } from './exploreData'
 import rightArrow from '../../Assets/rightArrow.png'
 import { motion } from 'framer-motion';
 
-const Explore = () => {
+const Explore = ({ navigate }) => {
 
     const transition = { type: 'spring', duration: 0.5 }
 
@@ -28,6 +28,7 @@ const Explore = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ ...transition, duration: transition?.duration + 1 * (index + 1) }}
                             className='category'
+                            onClick={() => navigate('/OrderPage')}
                         >
                             <img src={ele?.image} alt="" />
                             <span>{title}</span>
