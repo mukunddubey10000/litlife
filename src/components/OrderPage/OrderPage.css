@@ -96,6 +96,7 @@
         width: auto;
         display: flex;
         flex-direction: column;
+        margin-bottom: 8rem;
     }
     .items{
         display: flex;

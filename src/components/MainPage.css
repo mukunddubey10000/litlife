@@ -1,6 +1,6 @@
 .MainPage {
     display: flex;
-    height: 100vh;
+    height: auto;
     position: relative;
     top: 2rem;
     justify-content: space-between;
@@ -181,10 +181,12 @@
 @media screen and (max-width:  768px) {
     .MainPage{
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .the-best-ad{
-        top: 2rem;
+        top: 1rem;
         margin-top: 0;
         font-size: small;
         align-self: center;
@@ -215,15 +217,15 @@
 
     .right-h{
         position: relative;
-        background: none
+        background: none;
     }
 
     .all-product-img {
         position: relative;
-        top: 3rem;
-        right: 2.9rem;
-        width: 25rem;
-        height: 15rem;
+        top: 0rem;
+        width: auto;
+        max-height: 50vh;
+        object-fit: contain;
     }
 
     .Best-Innovation-Typrewriter{

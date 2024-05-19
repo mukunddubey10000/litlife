@@ -154,30 +154,38 @@
 @media screen and (max-width: 768px) {
     .contact-us-title{
         font-size: 3.5rem;
-        top: 1rem;
         position: relative;
         display: flex;
+        top: 10rem
+    }
+
+    .grid-container{
+        top: 8rem;
+        width: auto;
     }
 
     .contact-us-container{
         display: flex;
         flex-direction: column;
+        width: auto;
+    }
+
+    .form{
     }
 
     .input1,
     .input2,
     .input3{
         border-radius: 5px;
-        min-width: fit-content;
+        /* min-width: 100%; */
         font-size: 1rem;
-        box-sizing: border-box;
         height: 2.5rem;
         position: relative;
         top: 0;
         left: 0rem;
-        align-self: center;
-        /* margin-left: auto; */
-        margin-right: auto;
+        width: 80vw;
+        /* align-self: center; */
+        /* margin: 1rem */
     }
 
     .input4{
@@ -185,6 +193,9 @@
         font-size: 1rem;
         box-sizing: border-box;
         height: 5rem;
+        width: 80vw;
+        /* align-self: center; */
+        /* margin-left: 1rem; */
         position: relative;
         top: 0;
         left: 0rem;

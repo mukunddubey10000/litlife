@@ -32,7 +32,7 @@
   .App{
     gap: 2rem;
     background-image: url("https://wallpapertag.com/wallpaper/full/6/7/c/142676-clean-background-1920x1080-for-android-40.jpg");
-    gap: 10rem;
+    gap: 1rem;
     animation: moveBackground 20s linear infinite;
     mix-blend-mode: overlay;
     scroll-behavior: smooth;
